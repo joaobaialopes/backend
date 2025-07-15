@@ -14,8 +14,8 @@ public class Cliente implements Serializable {
     @Column(name = "CLI_NOME")
     private String cliNome;
 
-    @Column(name = "CLI_CPF", length = 11)
-    private String cliCpf;
+    @Column(name = "CLI_IDADE", length = 2)
+    private String cliIdade;
 
     @Column(name = "CLI_EMAIL")
     private String cliEmail;
@@ -23,15 +23,23 @@ public class Cliente implements Serializable {
     @Column(name = "CLI_TELEFONE", length = 14)
     private String cliTelefone;
 
+    @Column(name = "CLI_CPF", length = 11)
+    private String cliCpf;
+
+    @Column(name = "CLI_ENDERECO")
+    private String cliEndereco;
+
     public Cliente() {
     }
 
-    public Cliente(Long cliId, String cliNome, String cliCpf, String cliEmail, String cliTelefone) {
+    public Cliente(Long cliId, String cliNome, String cliIdade,String cliEmail, String cliTelefone, String cliCpf, String cliEndereco) {
         this.cliId = cliId;
         this.cliNome = cliNome;
-        this.cliCpf = cliCpf;
+        this.cliIdade = cliIdade;
         this.cliEmail = cliEmail;
         this.cliTelefone = cliTelefone;
+        this.cliCpf = cliCpf;
+        this.cliEndereco = cliEndereco;
     }
 
     public Long getCliId() {
@@ -50,13 +58,11 @@ public class Cliente implements Serializable {
         this.cliNome = cliNome;
     }
 
-    public String getCliCpf() {
-        return cliCpf;
+    public String getCliIdade() {
+        return cliIdade;
     }
 
-    public void setCliCpf(String cliCpf) {
-        this.cliCpf = cliCpf;
-    }
+    public void setCliIdade(String cliIdade) { this.cliIdade = cliIdade; }
 
     public String getCliEmail() {
         return cliEmail;
@@ -73,4 +79,22 @@ public class Cliente implements Serializable {
     public void setCliTelefone(String cliTelefone) {
         this.cliTelefone = cliTelefone;
     }
+
+    public String getCliCpf() {
+        return cliCpf;
+    }
+
+    public void setCliCpf(String cliCpf) {
+        this.cliCpf = cliCpf;
+    }
+
+    public String getCliEndereco() {
+        return cliEndereco;
+    }
+
+    public void setCliEndereco(String cliEndereco) {
+        this.cliEndereco = cliEndereco;
+    }
+
+
 }
